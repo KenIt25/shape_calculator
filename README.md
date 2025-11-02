@@ -54,7 +54,7 @@ class Shape(abc.ABC):
     def get_color(self):
         return self._color
 
-### Rectangle – Inherits from Shape
+# Rectangle – Inherits from Shape
 class Rectangle(Shape):
     def __init__(self, color, length, width):
         super().__init__(color)  # Inherit 'color' attribute
@@ -65,7 +65,7 @@ class Rectangle(Shape):
     def calculate_area(self):
         return self._length * self._width
 
-### Circle – Inherits from Shape
+# Circle – Inherits from Shape
 class Circle(Shape):
     def __init__(self, color, radius):
         super().__init__(color)
@@ -76,7 +76,7 @@ class Circle(Shape):
     def calculate_area(self):
         return self._PI * (self._radius ** 2)
 
-## OUTPUT
+# OUTPUT
 ---Shape Calculator by Kenneth Ituma ---
 
 The Blue Rectangle has an area of: 40.00
