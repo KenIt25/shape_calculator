@@ -4,13 +4,13 @@
 
 ---
 
-# 🧮 Shape Calculator
+# Shape Calculator
 
 A Python program that calculates the **areas of a rectangle and a circle**, integrating the **four core OOP concepts**.
 
 ---
 
-## 🧩 What This Program Does
+## What This Program Does
 It lets you:
 
 - Create shapes such as **Rectangle** and **Circle**
@@ -20,7 +20,7 @@ It lets you:
 
 ---
 
-## 🧠 The 4 OOP Concepts (Explained Simply)
+## The 4 OOP Concepts (Explained Simply)
 
 | **Concept** | **What It Means** | **Where You See It** |
 |--------------|------------------|-----------------------|
@@ -31,9 +31,9 @@ It lets you:
 
 ---
 
-## 🧾 Code Explained Step by Step
+## Code Explained Step by Step
 
-### 1️⃣ Abstract Base Class – `Shape`
+### Abstract Base Class – `Shape`
 ```python
 import abc
 
@@ -54,3 +54,33 @@ class Shape(abc.ABC):
     def get_color(self):
         return self._color
 
+### Rectangle – Inherits from Shape
+class Rectangle(Shape):
+    def __init__(self, color, length, width):
+        super().__init__(color)  # Inherit 'color' attribute
+        self._length = length
+        self._width = width
+
+    # Polymorphism: specific implementation
+    def calculate_area(self):
+        return self._length * self._width
+
+### Circle – Inherits from Shape
+class Circle(Shape):
+    def __init__(self, color, radius):
+        super().__init__(color)
+        self._radius = radius
+        self._PI = 3.14159  # Encapsulation: private constant
+
+    # Polymorphism: unique area formula
+    def calculate_area(self):
+        return self._PI * (self._radius ** 2)
+
+## OUTPUT
+---Shape Calculator by Kenneth Ituma ---
+
+The Blue Rectangle has an area of: 40.00
+The Green Circle has an area of: 113.10
+The circle's color is: Green
+
+--- Program end ---
